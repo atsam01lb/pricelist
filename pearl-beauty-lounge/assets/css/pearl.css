@@ -416,4 +416,7 @@ img { max-width: 100%; display: block; }
   .pearl-catnav { top: 118px; }
   .pearl-btn { width: 100%; justify-content: center; }
   .pearl-row-name { font-size: 13.5px; }
+  /* On narrow screens, keep the couple in the chairs (right side of the
+     photo) in frame instead of the empty wall at the center crop. */
+  .pearl-hero-bg { background-position: right 30%; }
 }
