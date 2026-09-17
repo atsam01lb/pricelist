@@ -3,57 +3,329 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pearl Beauty Lounge | Price List Coming Soon</title>
-<meta name="description" content="Pearl Beauty Lounge's digital price list is on its way: designed, built and hosted by Colart Digital Marketing Agency.">
-<meta name="robots" content="noindex">
+<title>Pearl Beauty Lounge | Price List</title>
+<meta name="description" content="Pearl Beauty Lounge's official price list: skin care, make-up, nails and toes, relaxing massage for her, and grooming services for him. Digital price list designed, built and hosted by Colart Digital Marketing Agency.">
 
-<link rel="icon" type="image/png" href="../assets/img/colart-logo.png">
+<link rel="icon" type="image/png" href="assets/img/pearl-logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/pricelists.css">
-<style>
-  :root { --cs-accent: #7a1f4a; --cs-accent-2: #c81478; }
-  body { overflow-x: hidden; }
-</style>
+<link rel="stylesheet" href="assets/css/pearl.css">
 </head>
 <body>
 
-<header class="pl-header">
-  <a href="/" class="logo" aria-label="Price Lists by Colart: home">
-    <img src="../assets/img/colart-logo.png" alt="Colart Digital Marketing Agency">
-  </a>
-  <a href="https://colartdigitalmarketingagency.com" class="back-link">
-    <i class="fa-solid fa-arrow-left"></i>
-    <span>Colart Digital Marketing Agency</span>
+<header class="pearl-header">
+  <a href="#top" aria-label="Pearl Beauty Lounge: home">
+    <img src="assets/img/pearl-logo.png" alt="Pearl Beauty Lounge" style="height:34px;width:auto;border-radius:8px;">
   </a>
 </header>
 
-<main>
-  <section class="coming-soon-section">
-    <div class="coming-soon-card">
-      <div class="coming-soon-logo">
-        <i class="fa-solid fa-spa"></i>
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="pearl-hero">
+    <img src="assets/img/pearl-logo.png" alt="Pearl Beauty Lounge logo" class="pearl-hero-logo">
+    <span class="pearl-hero-eyebrow">Official Price List</span>
+    <h1 class="pearl-hero-title pearl-display">Pearl Beauty Lounge</h1>
+    <p class="pearl-hero-text">Skin care, make-up, nails and relaxation for her, grooming and styling for him: every service in one place.</p>
+  </section>
+
+  <!-- ===== GENDER TOGGLE ===== -->
+  <div class="gender-toggle-wrap">
+    <div class="gender-toggle" id="genderToggle" data-active="her">
+      <span class="gender-indicator"></span>
+      <button class="gender-btn is-active" data-target="her" type="button"><i class="fa-solid fa-venus"></i> For Her</button>
+      <button class="gender-btn" data-target="him" type="button"><i class="fa-solid fa-mars"></i> For Him</button>
+    </div>
+  </div>
+
+  <!-- ===== CATEGORY NAV — HER ===== -->
+  <nav class="pearl-catnav gender-catnav" data-gender="her" aria-label="Price list categories for her">
+    <div class="pearl-catnav-inner">
+      <a href="#skincare-her">Skin Care</a>
+      <a href="#makeup">Make-Up</a>
+      <a href="#nails">Nails &amp; Toes</a>
+      <a href="#massage-her">Massage</a>
+    </div>
+  </nav>
+
+  <!-- ===== CATEGORY NAV — HIM ===== -->
+  <nav class="pearl-catnav gender-catnav" data-gender="him" style="display:none;" aria-label="Price list categories for him">
+    <div class="pearl-catnav-inner">
+      <a href="#handfeet-him">Hand &amp; Feet</a>
+      <a href="#skincare-him">Skin Care</a>
+      <a href="#styling-him">Styling</a>
+      <a href="#massage-him">Massage</a>
+    </div>
+  </nav>
+
+  <!-- ===================================================== -->
+  <!-- ===================  FOR HER  ======================= -->
+  <!-- ===================================================== -->
+  <div class="gender-panel is-visible" data-gender="her">
+
+    <!-- SKIN CARE -->
+    <section class="pearl-section" id="skincare-her">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-spa"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Skin Care</h2>
+          <p class="pearl-section-sub">Facials &amp; treatments</p>
+        </div>
       </div>
-      <span class="coming-soon-eyebrow">Price List Coming Soon</span>
-      <h1 class="coming-soon-title">Pearl Beauty Lounge</h1>
-      <p class="coming-soon-text">We're putting the finishing touches on Pearl Beauty Lounge's digital price list. Check back soon for the full menu of services and pricing.</p>
-      <div class="coming-soon-notify">
-        <a href="/" class="coming-soon-back">
-          <i class="fa-solid fa-arrow-left"></i>
-          Back to Price Lists
-        </a>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Mini Facial</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Skin Treatment</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Mesotherapy</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
       </div>
-      <p class="coming-soon-powered">
-        Structured by <a href="https://www.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Colart Digital Marketing Agency</a> &middot; Hosted by <a href="/" >Price Lists by Colart</a>
-      </p>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- MAKE-UP -->
+    <section class="pearl-section" id="makeup">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Make-Up</h2>
+          <p class="pearl-section-sub">Everyday to bridal</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Styling Makeup (Mise en plis)</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Regular Makeup</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Engagement Makeup</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Bridal Makeup</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Eyebrows</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Upper Lip</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- NAILS & TOES -->
+    <section class="pearl-section" id="nails">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Nails &amp; Toes</h2>
+          <p class="pearl-section-sub">Care, extensions &amp; art</p>
+        </div>
+      </div>
+
+      <div class="pearl-group">
+        <h3 class="pearl-group-title">Nail Care</h3>
+        <div class="pearl-row"><span class="pearl-row-name">Russian Manicure</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Russian Pedicure</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+
+      <div class="pearl-group">
+        <h3 class="pearl-group-title">Extensions</h3>
+        <div class="pearl-row"><span class="pearl-row-name">Full Set Gel / Polygel</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Refill Gel / Polygel</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Nail Repair (per nail)</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Soak Off + Nail Clean Up</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+
+      <div class="pearl-group">
+        <h3 class="pearl-group-title">Polish &amp; Colors</h3>
+        <div class="pearl-row"><span class="pearl-row-name">Nail Polish Application (Pose Vernis)</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Toes Polish (Pose Toes)</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Rubber Base + Gel Color</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Builder Gel + Gel Color</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Russian Pedicure + Gel Color</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+
+      <div class="pearl-group">
+        <h3 class="pearl-group-title">Nail Art</h3>
+        <div class="pearl-row"><span class="pearl-row-name">French</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Ombre</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Chrome</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Cat Eye</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Design (per nail)</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- MASSAGE (GIRLS ONLY) -->
+    <section class="pearl-section" id="massage-her">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Massage Relaxant</h2>
+          <p class="pearl-section-sub">Girls only</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">15 Minutes</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">25 Minutes</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">45 Minutes</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- ===================  FOR HIM  ======================= -->
+  <!-- ===================================================== -->
+  <div class="gender-panel" data-gender="him" style="display:none;">
+
+    <!-- HAND & FEET CARE -->
+    <section class="pearl-section" id="handfeet-him">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Hand &amp; Feet Care</h2>
+          <p class="pearl-section-sub">Gentlemen's manicure &amp; pedicure</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Russian Manicure</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Russian Pedicure</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- SKIN CARE -->
+    <section class="pearl-section" id="skincare-him">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-spa"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Skin Care</h2>
+          <p class="pearl-section-sub">Facials &amp; treatments</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Mini Facial</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Skin Treatment</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Mesotherapy</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- STYLING -->
+    <section class="pearl-section" id="styling-him">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-scissors"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Styling</h2>
+          <p class="pearl-section-sub">Cut &amp; beard</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Regular Haircut</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Beard</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Haircut + Beard</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Haircut Kids</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+    <div class="pearl-divider"></div>
+
+    <!-- MASSAGE -->
+    <section class="pearl-section" id="massage-him">
+      <div class="pearl-section-head">
+        <div class="pearl-section-icon"><i class="fa-solid fa-hands"></i></div>
+        <div>
+          <h2 class="pearl-section-title pearl-display">Massage</h2>
+          <p class="pearl-section-sub">Face &amp; head relaxation</p>
+        </div>
+      </div>
+      <div class="pearl-group">
+        <div class="pearl-row"><span class="pearl-row-name">Face Massage</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+        <div class="pearl-row"><span class="pearl-row-name">Head / Neck Massage</span><span class="pearl-row-dots"></span><span class="pearl-row-price">$0</span></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section class="pearl-cta">
+    <h2 class="pearl-cta-title pearl-display">Book Your Visit</h2>
+    <p class="pearl-cta-text">Message us on WhatsApp to reserve your appointment.</p>
+    <a href="https://wa.me/96171962193" class="pearl-btn" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Book Now
+    </a>
+
+    <div class="pearl-contact-info">
+      <p><i class="fa-solid fa-location-dot"></i>Tripoli, Mina, Dr. Labban Street</p>
+      <p><a href="tel:+96171962193"><i class="fa-solid fa-phone"></i>+961 71 962 193</a></p>
+    </div>
+
+    <div class="pearl-socials">
+      <a href="https://instagram.com/pearlbeautylounge.lb" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://facebook.com/pearlbeautylounge.lb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://tiktok.com/@pearlbeautylounge.lb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
     </div>
   </section>
+
 </main>
+
+<footer class="pearl-footer">
+  <p class="pearl-footer-credits">
+    Structured by <a href="https://www.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Colart Digital Marketing Agency</a><span class="pearl-sep">&middot;</span>Hosted by <a href="https://pricelists.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Price Lists by Colart</a>
+  </p>
+</footer>
+
+<script>
+  (function () {
+    // Animated For Her / For Him toggle
+    var toggle = document.getElementById('genderToggle');
+    var buttons = toggle.querySelectorAll('.gender-btn');
+    var panels = document.querySelectorAll('.gender-panel');
+    var catnavs = document.querySelectorAll('.gender-catnav');
+
+    function setGender(target) {
+      toggle.setAttribute('data-active', target);
+      buttons.forEach(function (b) {
+        b.classList.toggle('is-active', b.getAttribute('data-target') === target);
+      });
+      panels.forEach(function (p) {
+        var match = p.getAttribute('data-gender') === target;
+        if (match) {
+          p.style.display = 'block';
+          requestAnimationFrame(function () { p.classList.add('is-visible'); });
+        } else {
+          p.classList.remove('is-visible');
+          p.style.display = 'none';
+        }
+      });
+      catnavs.forEach(function (n) {
+        n.style.display = n.getAttribute('data-gender') === target ? 'block' : 'none';
+      });
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setGender(b.getAttribute('data-target')); });
+    });
+
+    // Scroll reveal: the js-reveal class (opacity/transform) is added here,
+    // by JS, right before observing — so content stays fully visible by
+    // default if this script fails to run, instead of getting stuck hidden.
+    var revealEls = document.querySelectorAll('.pearl-section, .pearl-cta');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(function (el) {
+        el.classList.add('js-reveal');
+        io.observe(el);
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
