@@ -1,0 +1,307 @@
+/* ===========================================
+   PRICE LISTS BY COLART — Landing page styles
+   Extends style.css brand tokens (--purple, --magenta, --yellow, etc.)
+   Same header / footer pattern used on menus.colartdigitalmarketingagency.com
+=========================================== */
+
+/* ---- Minimal micro-site header (logo + back to Colart) ---- */
+.pl-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 36px;
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.pl-header .logo img { height: 44px; }
+.pl-header .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple);
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(100, 40, 120, .18);
+  transition: background .3s, color .3s, border-color .3s;
+}
+.pl-header .back-link i { font-size: 11px; }
+.pl-header .back-link:hover {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+@media (max-width: 640px) {
+  .pl-header { padding: 14px 20px; }
+  .pl-header .back-link span { display: none; }
+  .pl-header .back-link { padding: 10px; }
+  .pl-header .logo img { height: 38px; }
+}
+
+/* ---- Intro / hero section ---- */
+.pl-hero {
+  position: relative;
+  padding: 150px 36px 100px;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(220, 220, 60, .14) 0%, transparent 40%),
+    radial-gradient(circle at 88% 80%, rgba(80, 160, 180, .18) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(100, 40, 120, .94) 0%, rgba(83, 28, 100, .94) 50%, rgba(200, 20, 120, .9) 100%);
+}
+.pl-hero-content {
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.pl-hero .section-eyebrow-pill.light { margin-bottom: 22px; }
+.pl-hero-title {
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  margin-bottom: 22px;
+}
+.pl-hero-title .accent {
+  font-style: italic;
+  background: linear-gradient(120deg, var(--yellow) 0%, #ffd9ec 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pl-hero-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .88);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ---- Price list directory grid ---- */
+.pricelists-section {
+  padding: 110px 36px;
+  background: var(--bg-soft);
+}
+.pricelists-section .container { max-width: 1280px; margin: 0 auto; }
+@media (max-width: 768px) { .pricelists-section { padding: 80px 24px; } }
+
+.pricelist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pricelist-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 22px;
+  padding: 38px 26px 30px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 30px rgba(26, 20, 36, .05);
+  transition: transform .5s cubic-bezier(.7, 0, .2, 1), box-shadow .5s, border-color .5s;
+  overflow: hidden;
+}
+.pricelist-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--magenta));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s cubic-bezier(.7, 0, .2, 1);
+}
+.pricelist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 54px rgba(100, 40, 120, .16);
+  border-color: rgba(100, 40, 120, .22);
+}
+.pricelist-card:hover::before { transform: scaleX(1); }
+.pricelist-card:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
+}
+
+.pricelist-card-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  transition: transform .4s cubic-bezier(.7, 0, .2, 1);
+}
+.pricelist-card:hover .pricelist-card-logo { transform: scale(1.05); }
+.pricelist-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+}
+.pricelist-card-logo i {
+  font-size: 34px;
+  color: var(--purple);
+}
+
+.pricelist-card-name {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.pricelist-card-cat {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.pricelist-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.pricelist-card-status.live {
+  background: rgba(140, 180, 60, .14);
+  color: #5c7a24;
+}
+.pricelist-card-status.live i { font-size: 8px; color: var(--lime); }
+.pricelist-card-status.soon {
+  background: rgba(200, 20, 120, .10);
+  color: var(--magenta);
+}
+.pricelist-card-status.soon i { font-size: 10px; }
+
+/* ---- Coming soon page (shared template) ---- */
+.coming-soon-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(220, 220, 60, .10) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(80, 160, 180, .14) 0%, transparent 40%),
+    linear-gradient(135deg, var(--cs-accent, var(--purple)) 0%, #2c1533 55%, var(--cs-accent-2, var(--magenta)) 100%);
+}
+.coming-soon-card {
+  max-width: 560px;
+  width: 100%;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 56px 40px;
+  color: #fff;
+}
+.coming-soon-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+}
+.coming-soon-logo img { width: 100%; height: 100%; object-fit: contain; padding: 16px; }
+.coming-soon-logo i { font-size: 44px; color: var(--purple); }
+.coming-soon-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+.coming-soon-title {
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.coming-soon-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .82);
+  max-width: 420px;
+  margin: 0 auto 32px;
+}
+.coming-soon-notify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.coming-soon-back,
+.coming-soon-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #fff;
+  color: var(--ink);
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: transform .3s, background .3s;
+}
+.coming-soon-back:hover,
+.coming-soon-cta:hover { background: var(--yellow); transform: translateY(-2px); }
+.coming-soon-back i,
+.coming-soon-cta i { font-size: 11px; }
+.coming-soon-cta.ghost {
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, .3);
+}
+.coming-soon-cta.ghost:hover { background: rgba(255, 255, 255, .2); }
+.coming-soon-powered {
+  margin-top: 34px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, .55);
+}
+.coming-soon-powered a { color: rgba(255, 255, 255, .8); font-weight: 700; }
+.coming-soon-powered a:hover { color: #fff; }
+
+/* ---- Micro-site footer credit line (used on hosted price-list pages) ---- */
+.pl-footer {
+  padding: 34px 24px;
+  text-align: center;
+  background: var(--bg-soft);
+}
+.pl-footer p { font-size: 13px; color: var(--muted); }
+.pl-footer a { color: var(--purple); font-weight: 700; }
+.pl-footer a:hover { color: var(--magenta); }

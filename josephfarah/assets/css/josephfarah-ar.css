@@ -1,0 +1,425 @@
+/* ===========================================
+   JOSEPH FARAH — Digital Price List
+   Personal brand identity by Colart Digital Marketing Agency
+   Ink Black / Stone / Pale Stone / Alabaster / Signature Marble
+=========================================== */
+
+:root {
+  --jf-ink:      #0B0B0B;
+  --jf-stone:    #726C63;
+  --jf-pale:     #B9B3A8;
+  --jf-alabaster:#F7F6F4;
+  --jf-white:    #FFFFFF;
+  --jf-line:     rgba(11, 11, 11, .10);
+}
+
+* { box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.jf-body {
+  margin: 0;
+  background: var(--jf-alabaster);
+  color: var(--jf-ink);
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+.jf-display {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.jf-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---- Header ---- */
+.jf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  background: var(--jf-alabaster);
+  border-bottom: 1px solid var(--jf-line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.jf-header-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.jf-header-logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+.jf-header-name {
+  font-family: 'GFS Didot', serif;
+  font-size: 17px;
+  letter-spacing: .16em;
+  direction: ltr;
+}
+
+/* ---- Language switcher ---- */
+.jf-langswitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.jf-langswitch a {
+  color: var(--jf-stone);
+  transition: color .3s;
+}
+.jf-langswitch a:hover { color: var(--jf-ink); }
+.jf-langswitch .jf-lang-current {
+  color: var(--jf-ink);
+}
+.jf-langswitch .jf-lang-sep {
+  color: var(--jf-pale);
+}
+
+/* ---- Hero (signature marble ground) ---- */
+.jf-hero {
+  position: relative;
+  text-align: center;
+  padding: 96px 28px 76px;
+  background: linear-gradient(rgba(247,246,244,.35), rgba(247,246,244,.72)), url('../img/josephfarah-marble.jpg');
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+.jf-hero-mono {
+  width: 78px;
+  height: auto;
+  margin: 0 auto 22px;
+  display: block;
+}
+.jf-hero-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--jf-stone);
+  margin-bottom: 18px;
+}
+.jf-hero-title {
+  font-size: clamp(32px, 6vw, 50px);
+  line-height: 1.35;
+  margin: 0 0 18px;
+  letter-spacing: 0;
+}
+.jf-hero-location {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--jf-stone);
+  margin: 0 0 22px;
+}
+.jf-hero-text {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--jf-stone);
+  font-weight: 300;
+}
+
+/* ---- Category nav ---- */
+.jf-catnav {
+  position: sticky;
+  top: 73px;
+  z-index: 40;
+  background: rgba(247, 246, 244, .92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--jf-line);
+}
+.jf-catnav-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 14px 28px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.jf-catnav-inner::-webkit-scrollbar { display: none; }
+.jf-catnav a {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--jf-stone);
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--jf-line);
+  transition: background .3s, color .3s, border-color .3s;
+  white-space: nowrap;
+}
+.jf-catnav a:hover,
+.jf-catnav a.active {
+  background: var(--jf-ink);
+  color: var(--jf-white);
+  border-color: var(--jf-ink);
+}
+
+/* ---- Price list sections ---- */
+.jf-section {
+  padding: 74px 0 12px;
+  scroll-margin-top: 130px;
+}
+.jf-section-head {
+  text-align: center;
+  margin-bottom: 46px;
+}
+.jf-section-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 1px solid var(--jf-line);
+  display: grid;
+  place-items: center;
+  color: var(--jf-stone);
+  font-size: 16px;
+}
+.jf-section-title {
+  font-size: clamp(24px, 4vw, 32px);
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+.jf-section-sub {
+  font-size: 13px;
+  color: var(--jf-stone);
+  letter-spacing: 0;
+}
+.jf-section-intro {
+  max-width: 560px;
+  margin: 14px auto 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--jf-stone);
+  font-style: normal;
+}
+
+/* ---- Featured offer box ---- */
+.jf-feature {
+  margin: 0 0 40px;
+  padding: 26px 28px;
+  background: var(--jf-ink);
+  border-radius: 4px;
+  text-align: center;
+}
+.jf-feature-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--jf-pale);
+  margin-bottom: 10px;
+}
+.jf-feature-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.jf-feature-name {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--jf-white);
+}
+.jf-feature-price {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--jf-white);
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+.jf-feature-note {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  font-style: normal;
+  color: var(--jf-pale);
+}
+
+/* ---- Two-column groups (laser price grid) ---- */
+.jf-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 640px) {
+  .jf-cols {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 56px;
+  }
+}
+
+.jf-group { margin-bottom: 44px; }
+.jf-group-title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--jf-stone);
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--jf-line);
+}
+
+.jf-item {
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--jf-line);
+}
+.jf-item:last-child { border-bottom: none; }
+
+.jf-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.jf-row-name {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--jf-ink);
+}
+.jf-row-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--jf-pale);
+  transform: translateY(-4px);
+  min-width: 24px;
+}
+.jf-row-price {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--jf-ink);
+  white-space: nowrap;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+.jf-row-desc {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  line-height: 1.9;
+  font-style: normal;
+  color: var(--jf-stone);
+}
+
+.jf-note {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--jf-stone);
+  font-style: normal;
+}
+.jf-note strong { color: var(--jf-ink); font-style: normal; }
+
+.jf-callout {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border: 1px solid var(--jf-line);
+  border-radius: 4px;
+  background: var(--jf-white);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--jf-stone);
+  text-align: center;
+}
+.jf-callout strong { color: var(--jf-ink); }
+
+/* ---- Divider ---- */
+.jf-divider {
+  max-width: 860px;
+  margin: 10px auto 0;
+  padding: 0 28px;
+}
+.jf-divider::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--jf-pale), transparent);
+}
+
+/* ---- Booking CTA ---- */
+.jf-cta {
+  text-align: center;
+  padding: 86px 28px 90px;
+}
+.jf-cta-title {
+  font-size: clamp(22px, 4vw, 30px);
+  margin: 0 0 14px;
+}
+.jf-cta-text {
+  max-width: 420px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--jf-stone);
+}
+.jf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--jf-ink);
+  color: var(--jf-white);
+  padding: 16px 34px;
+  border-radius: 999px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: background .35s, transform .35s;
+}
+.jf-btn:hover { background: var(--jf-stone); transform: translateY(-2px); }
+.jf-btn i { font-size: 12px; }
+
+/* ---- Footer ---- */
+.jf-footer {
+  padding: 40px 28px 34px;
+  text-align: center;
+  border-top: 1px solid var(--jf-line);
+}
+.jf-footer-mono {
+  width: 30px;
+  height: auto;
+  margin: 0 auto 14px;
+  opacity: .7;
+}
+.jf-footer-credits {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--jf-stone);
+  letter-spacing: 0;
+}
+.jf-footer-credits a {
+  color: var(--jf-stone);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .3s;
+}
+.jf-footer-credits a:hover { color: var(--jf-ink); }
+.jf-footer-credits .jf-sep { margin: 0 8px; color: var(--jf-pale); }
+
+@media (max-width: 560px) {
+  .jf-hero { padding: 80px 24px 60px; }
+  .jf-section { padding: 56px 0 8px; }
+}
