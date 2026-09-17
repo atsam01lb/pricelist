@@ -3,14 +3,14 @@
    Self-contained brand styles for this client page
 =========================================== */
 :root {
-  --pl-bg:      #0e0e11;
-  --pl-bg-2:    #17171b;
-  --pl-card:    #1c1c21;
-  --pl-cream:   #f5f2ea;
-  --pl-gold:    #c9a463;
-  --pl-gold-lt: #e7cd93;
-  --pl-muted:   rgba(245, 242, 234, .60);
-  --pl-line:    rgba(245, 242, 234, .12);
+  --pl-bg:      #0b0b0c;
+  --pl-bg-2:    #141415;
+  --pl-card:    #1a1a1b;
+  --pl-cream:   #f5f5f3;
+  --pl-gold:    #ffffff;
+  --pl-gold-lt: #d6d6d3;
+  --pl-muted:   rgba(245, 245, 243, .58);
+  --pl-line:    rgba(245, 245, 243, .14);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +35,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   align-items: center;
   padding: 16px 24px;
-  background: rgba(14, 14, 17, .82);
+  background: rgba(11, 11, 12, .82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--pl-line);
@@ -61,15 +61,40 @@ img { max-width: 100%; display: block; }
   margin-top: 2px;
 }
 
-/* ---- Hero ---- */
+/* ---- Hero (real salon photo, desaturated to black & white) ---- */
 .pearl-hero {
   position: relative;
-  padding: 130px 24px 60px;
+  min-height: 78vh;
+  padding: 150px 24px 70px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.pearl-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url('../img/pearl-hero.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: grayscale(1) contrast(1.05);
+}
+.pearl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background:
-    radial-gradient(circle at 20% 10%, rgba(201, 164, 99, .10) 0%, transparent 45%),
-    radial-gradient(circle at 85% 30%, rgba(201, 164, 99, .08) 0%, transparent 40%),
-    var(--pl-bg);
+    linear-gradient(180deg, rgba(11, 11, 12, .45) 0%, rgba(11, 11, 12, .72) 60%, rgba(11, 11, 12, .97) 100%),
+    linear-gradient(90deg, rgba(11, 11, 12, .55) 0%, rgba(11, 11, 12, .15) 45%, rgba(11, 11, 12, .55) 100%);
+}
+.pearl-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .pearl-hero-logo {
   width: min(360px, 78vw);
@@ -119,7 +144,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: center;
   padding: 18px 24px;
-  background: linear-gradient(180deg, var(--pl-bg) 60%, rgba(14, 14, 17, 0) 100%);
+  background: linear-gradient(180deg, var(--pl-bg) 60%, rgba(11, 11, 12, 0) 100%);
 }
 .gender-toggle {
   position: relative;
@@ -168,7 +193,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 129px;
   z-index: 39;
-  background: rgba(14, 14, 17, .92);
+  background: rgba(11, 11, 12, .92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--pl-line);
   overflow-x: auto;
@@ -272,7 +297,7 @@ img { max-width: 100%; display: block; }
 }
 .pearl-row-dots {
   flex: 1;
-  border-bottom: 1px dotted rgba(245, 242, 234, .25);
+  border-bottom: 1px dotted rgba(245, 245, 243, .25);
   transform: translateY(-4px);
 }
 .pearl-row-price {
@@ -319,9 +344,9 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: .03em;
   transition: transform .3s, box-shadow .3s;
-  box-shadow: 0 10px 30px rgba(201, 164, 99, .25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
 }
-.pearl-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201, 164, 99, .35); }
+.pearl-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0, 0, 0, .5); }
 
 .pearl-contact-info {
   margin-top: 34px;
