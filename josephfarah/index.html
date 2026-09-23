@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joseph Farah | Price List</title>
-<meta name="description" content="Joseph Farah's official price list: makeup, skin care, hair styling, nails, solarium, waxing, laser hair removal, permanent makeup and gentlemen's services. Digital menu designed, built and hosted by Colart Digital Marketing Agency.">
+<meta name="description" content="Joseph Farah's official price list: makeup, skin care, hair styling, nails, solarium, waxing, laser hair removal and permanent makeup for her, and nail care, solarium and laser for him. Digital menu designed, built and hosted by Colart Digital Marketing Agency.">
 
 <link rel="icon" type="image/svg+xml" href="assets/img/josephfarah-logo.svg">
 
@@ -42,8 +42,17 @@
     <p class="jf-hero-text">Every beauty and grooming service, from makeup to laser: refined and always up to date.</p>
   </section>
 
-  <!-- ===== CATEGORY NAV ===== -->
-  <nav class="jf-catnav" aria-label="Price list categories">
+  <!-- ===== GENDER TOGGLE ===== -->
+  <div class="jf-gender-toggle-wrap">
+    <div class="jf-gender-toggle" id="jfGenderToggle" data-active="her">
+      <span class="jf-gender-indicator"></span>
+      <button class="jf-gender-btn is-active" data-target="her" type="button"><i class="fa-solid fa-venus"></i> For Her</button>
+      <button class="jf-gender-btn" data-target="him" type="button"><i class="fa-solid fa-mars"></i> For Him</button>
+    </div>
+  </div>
+
+  <!-- ===== CATEGORY NAV — HER ===== -->
+  <nav class="jf-catnav jf-gender-catnav" data-gender="her" aria-label="Price list categories for her">
     <div class="jf-catnav-inner">
       <a href="#makeup">Make-Up</a>
       <a href="#skincare">Skin Care</a>
@@ -53,9 +62,22 @@
       <a href="#waxing">Waxing</a>
       <a href="#laser">Laser</a>
       <a href="#permanent">Permanent Makeup</a>
-      <a href="#gentlemens">Gentlemen's</a>
     </div>
   </nav>
+
+  <!-- ===== CATEGORY NAV — HIM ===== -->
+  <nav class="jf-catnav jf-gender-catnav" data-gender="him" style="display:none;" aria-label="Price list categories for him">
+    <div class="jf-catnav-inner">
+      <a href="#nailcare-him">Nail Care</a>
+      <a href="#solarium-him">Solarium</a>
+      <a href="#laser-him">Laser</a>
+    </div>
+  </nav>
+
+  <!-- ===================================================== -->
+  <!-- ===================    FOR HER    ==================== -->
+  <!-- ===================================================== -->
+  <div class="jf-gender-panel is-visible" data-gender="her">
 
   <!-- ===== MAKE-UP ===== -->
   <section class="jf-section" id="makeup">
@@ -68,7 +90,7 @@
       </div>
 
       <div class="jf-group">
-        <div class="jf-row"><span class="jf-row-name">Styling Makeup (Mise en plis)</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
+        <div class="jf-row"><span class="jf-row-name">Styling Makeup</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
         <div class="jf-row"><span class="jf-row-name">Regular Makeup</span><span class="jf-row-dots"></span><span class="jf-row-price">$50</span></div>
         <div class="jf-row"><span class="jf-row-name">Engagement Makeup</span><span class="jf-row-dots"></span><span class="jf-row-price">$100</span></div>
         <div class="jf-row"><span class="jf-row-name">Bridal Makeup</span><span class="jf-row-dots"></span><span class="jf-row-price">$200</span></div>
@@ -309,28 +331,118 @@
     </div>
   </section>
 
-  <div class="jf-divider"></div>
+  </div>
+  <!-- ===== END FOR HER ===== -->
 
-  <!-- ===== GENTLEMEN'S SERVICES ===== -->
-  <section class="jf-section" id="gentlemens">
+  <!-- ===================================================== -->
+  <!-- ===================    FOR HIM    ==================== -->
+  <!-- ===================================================== -->
+  <div class="jf-gender-panel" data-gender="him" style="display:none;">
+
+  <!-- ===== NAIL CARE ===== -->
+  <section class="jf-section" id="nailcare-him">
     <div class="jf-container">
 
       <div class="jf-section-head">
-        <div class="jf-section-icon"><i class="fa-solid fa-user-tie"></i></div>
-        <h2 class="jf-section-title jf-display">Gentlemen's Services</h2>
-        <p class="jf-section-sub">09 &middot; Manicure &amp; pedicure</p>
+        <div class="jf-section-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <h2 class="jf-section-title jf-display">Nail Care</h2>
+        <p class="jf-section-sub">01 &middot; Manicure &amp; pedicure</p>
       </div>
 
       <div class="jf-group">
-        <div class="jf-row"><span class="jf-row-name">Manicure normal</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
-        <div class="jf-row"><span class="jf-row-name">Manicure + scrub</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
-        <div class="jf-row"><span class="jf-row-name">Pedicure normal</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
-        <div class="jf-row"><span class="jf-row-name">Pedicure medical</span><span class="jf-row-dots"></span><span class="jf-row-price">$25</span></div>
-        <div class="jf-row"><span class="jf-row-name">Pedicure + reflexology</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
+        <div class="jf-row"><span class="jf-row-name">Russian Manicure</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+        <div class="jf-row"><span class="jf-row-name">Russian Pedicure</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+        <div class="jf-row"><span class="jf-row-name">Medical Pedicure</span><span class="jf-row-dots"></span><span class="jf-row-price">$25</span></div>
+        <div class="jf-row"><span class="jf-row-name">Medical Pedicure + Relaxing Massage</span><span class="jf-row-dots"></span><span class="jf-row-price">$40</span></div>
       </div>
 
     </div>
   </section>
+
+  <div class="jf-divider"></div>
+
+  <!-- ===== SOLARIUM ===== -->
+  <section class="jf-section" id="solarium-him">
+    <div class="jf-container">
+
+      <div class="jf-section-head">
+        <div class="jf-section-icon"><i class="fa-solid fa-sun"></i></div>
+        <h2 class="jf-section-title jf-display">Solarium</h2>
+        <p class="jf-section-sub">02 &middot; Sessions &amp; packages</p>
+      </div>
+
+      <div class="jf-group">
+        <div class="jf-row"><span class="jf-row-name">Solarium, 1 minute</span><span class="jf-row-dots"></span><span class="jf-row-price">$1</span></div>
+        <div class="jf-row"><span class="jf-row-name">Session, 12 minutes</span><span class="jf-row-dots"></span><span class="jf-row-price">$12</span></div>
+        <div class="jf-row"><span class="jf-row-name">Package, 100 minutes</span><span class="jf-row-dots"></span><span class="jf-row-price">$50</span></div>
+      </div>
+
+      <div class="jf-callout">
+        3 weeks to complete all sessions. Our solarium is fully hygienic to ensure your safety and comfort: <strong>no spots or discolouration</strong>.
+      </div>
+
+    </div>
+  </section>
+
+  <div class="jf-divider"></div>
+
+  <!-- ===== LASER HAIR REMOVAL ===== -->
+  <section class="jf-section" id="laser-him">
+    <div class="jf-container">
+
+      <div class="jf-section-head">
+        <div class="jf-section-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h2 class="jf-section-title jf-display">Laser Hair Removal</h2>
+        <p class="jf-section-sub">03 &middot; Fast, Precise Quadro Technology</p>
+        <p class="jf-section-intro">Smooth, comfortable results session after session.</p>
+      </div>
+
+      <div class="jf-feature">
+        <p class="jf-feature-label">Full Body Offer</p>
+        <div class="jf-feature-row">
+          <span class="jf-feature-name">Full Body Package</span>
+          <span class="jf-feature-price">$60</span>
+        </div>
+        <p class="jf-feature-note">Includes full legs, full arms, underarms &amp; bikini area.</p>
+      </div>
+
+      <div class="jf-cols">
+        <div class="jf-group">
+          <h3 class="jf-group-title">Body</h3>
+          <div class="jf-row"><span class="jf-row-name">Full legs</span><span class="jf-row-dots"></span><span class="jf-row-price">$30</span></div>
+          <div class="jf-row"><span class="jf-row-name">Half legs</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">Full arms</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">Half arms</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">Underarms</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">Full bikini</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">Full abdomen</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">Half abdomen</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">Line abdomen</span><span class="jf-row-dots"></span><span class="jf-row-price">$5</span></div>
+          <div class="jf-row"><span class="jf-row-name">Boobs</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">Chest</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+        </div>
+        <div class="jf-group">
+          <h3 class="jf-group-title">Back, Neck &amp; Face</h3>
+          <div class="jf-row"><span class="jf-row-name">Full back</span><span class="jf-row-dots"></span><span class="jf-row-price">$30</span></div>
+          <div class="jf-row"><span class="jf-row-name">Lower back</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">Buttocks</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">Shoulders</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">Front neck</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">Back neck</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">Full face</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">Half face</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">Upper lips</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">Chin</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">Forehead</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">Side burn</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+  <!-- ===== END FOR HIM ===== -->
 
   <!-- ===== BOOKING CTA ===== -->
   <section class="jf-cta">
@@ -350,6 +462,40 @@
     Structured by <a href="https://www.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Colart Digital Marketing Agency</a><span class="jf-sep">&middot;</span>Hosted by <a href="https://pricelists.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Price Lists by Colart</a>
   </p>
 </footer>
+
+<script>
+  (function () {
+    // Animated For Her / For Him toggle
+    var toggle = document.getElementById('jfGenderToggle');
+    var buttons = toggle.querySelectorAll('.jf-gender-btn');
+    var panels = document.querySelectorAll('.jf-gender-panel');
+    var catnavs = document.querySelectorAll('.jf-gender-catnav');
+
+    function setGender(target) {
+      toggle.setAttribute('data-active', target);
+      buttons.forEach(function (b) {
+        b.classList.toggle('is-active', b.getAttribute('data-target') === target);
+      });
+      panels.forEach(function (p) {
+        var match = p.getAttribute('data-gender') === target;
+        if (match) {
+          p.style.display = 'block';
+          requestAnimationFrame(function () { p.classList.add('is-visible'); });
+        } else {
+          p.classList.remove('is-visible');
+          p.style.display = 'none';
+        }
+      });
+      catnavs.forEach(function (n) {
+        n.style.display = n.getAttribute('data-gender') === target ? 'block' : 'none';
+      });
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setGender(b.getAttribute('data-target')); });
+    });
+  })();
+</script>
 
 </body>
 </html>
