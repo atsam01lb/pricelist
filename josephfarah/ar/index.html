@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>جوزيف فرح | قائمة الأسعار</title>
-<meta name="description" content="قائمة الأسعار الرسمية لجوزيف فرح: مكياج، عناية بالبشرة، تصفيف شعر، أظافر، سولاريوم، إزالة شعر بالشمع، ليزر، مكياج دائم وخدمات رجالية. قائمة رقمية صممتها وطورتها واستضافتها Colart Digital Marketing Agency.">
+<meta name="description" content="قائمة الأسعار الرسمية لجوزيف فرح: مكياج، عناية بالبشرة، تصفيف شعر، أظافر، سولاريوم، إزالة شعر بالشمع وبالليزر، ومكياج دائم لها، وعناية بالأظافر وسولاريوم وليزر له. قائمة رقمية صممتها وطورتها واستضافتها Colart Digital Marketing Agency.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/josephfarah-logo.svg">
 <link rel="alternate" hreflang="ar" href="./">
@@ -27,7 +27,7 @@
   <div class="jf-langswitch">
     <a href="../" lang="en">EN</a>
     <span class="jf-lang-sep">|</span>
-    <span class="jf-lang-current">ع</span>
+    <span class="jf-lang-current">AR</span>
   </div>
 </header>
 
@@ -41,8 +41,17 @@
     <p class="jf-hero-text">كل خدمات التجميل والعناية، من المكياج إلى الليزر: بعناية فائقة ومحدّثة دائماً.</p>
   </section>
 
-  <!-- ===== CATEGORY NAV ===== -->
-  <nav class="jf-catnav" aria-label="أقسام قائمة الأسعار">
+  <!-- ===== GENDER TOGGLE ===== -->
+  <div class="jf-gender-toggle-wrap">
+    <div class="jf-gender-toggle" id="jfGenderToggle" data-active="her">
+      <span class="jf-gender-indicator"></span>
+      <button class="jf-gender-btn is-active" data-target="her" type="button"><i class="fa-solid fa-venus"></i> لها</button>
+      <button class="jf-gender-btn" data-target="him" type="button"><i class="fa-solid fa-mars"></i> له</button>
+    </div>
+  </div>
+
+  <!-- ===== CATEGORY NAV — HER ===== -->
+  <nav class="jf-catnav jf-gender-catnav" data-gender="her" aria-label="أقسام قائمة الأسعار لها">
     <div class="jf-catnav-inner">
       <a href="#makeup">المكياج</a>
       <a href="#skincare">العناية بالبشرة</a>
@@ -52,9 +61,22 @@
       <a href="#waxing">الشمع</a>
       <a href="#laser">الليزر</a>
       <a href="#permanent">المكياج الدائم</a>
-      <a href="#gentlemens">خدمات الرجال</a>
     </div>
   </nav>
+
+  <!-- ===== CATEGORY NAV — HIM ===== -->
+  <nav class="jf-catnav jf-gender-catnav" data-gender="him" style="display:none;" aria-label="أقسام قائمة الأسعار له">
+    <div class="jf-catnav-inner">
+      <a href="#nailcare-him">العناية بالأظافر</a>
+      <a href="#solarium-him">السولاريوم</a>
+      <a href="#laser-him">الليزر</a>
+    </div>
+  </nav>
+
+  <!-- ===================================================== -->
+  <!-- ===================    لها    ==================== -->
+  <!-- ===================================================== -->
+  <div class="jf-gender-panel is-visible" data-gender="her">
 
   <!-- ===== MAKE-UP ===== -->
   <section class="jf-section" id="makeup">
@@ -67,7 +89,7 @@
       </div>
 
       <div class="jf-group">
-        <div class="jf-row"><span class="jf-row-name">مكياج التصفيف (Mise en plis)</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
+        <div class="jf-row"><span class="jf-row-name">مكياج التصفيف</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
         <div class="jf-row"><span class="jf-row-name">مكياج عادي</span><span class="jf-row-dots"></span><span class="jf-row-price">$50</span></div>
         <div class="jf-row"><span class="jf-row-name">مكياج خطوبة</span><span class="jf-row-dots"></span><span class="jf-row-price">$100</span></div>
         <div class="jf-row"><span class="jf-row-name">مكياج عروس</span><span class="jf-row-dots"></span><span class="jf-row-price">$200</span></div>
@@ -246,10 +268,10 @@
       <div class="jf-feature">
         <p class="jf-feature-label">عرض الجسم الكامل</p>
         <div class="jf-feature-row">
-          <span class="jf-feature-name">الجسم الكامل (عرض)</span>
+          <span class="jf-feature-name">الجسم الكامل (باقة)</span>
           <span class="jf-feature-price">$60</span>
         </div>
-        <p class="jf-feature-note">يشمل الساقين الكاملتين، الذراعين الكاملتين، الإبطين والبيكيني.</p>
+        <p class="jf-feature-note">يشمل الساقين الكاملتين، الذراعين الكاملتين، الإبطين ومنطقة البيكيني.</p>
       </div>
 
       <div class="jf-cols">
@@ -271,7 +293,7 @@
           <h3 class="jf-group-title">الظهر، الرقبة والوجه</h3>
           <div class="jf-row"><span class="jf-row-name">الظهر الكامل</span><span class="jf-row-dots"></span><span class="jf-row-price">$30</span></div>
           <div class="jf-row"><span class="jf-row-name">أسفل الظهر</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
-          <div class="jf-row"><span class="jf-row-name">باث (Bath)</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">الأرداف</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
           <div class="jf-row"><span class="jf-row-name">الكتفين</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
           <div class="jf-row"><span class="jf-row-name">مقدمة الرقبة</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
           <div class="jf-row"><span class="jf-row-name">خلفية الرقبة</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
@@ -308,28 +330,118 @@
     </div>
   </section>
 
-  <div class="jf-divider"></div>
+  </div>
+  <!-- ===== END لها ===== -->
 
-  <!-- ===== GENTLEMEN'S SERVICES ===== -->
-  <section class="jf-section" id="gentlemens">
+  <!-- ===================================================== -->
+  <!-- ===================    له    ==================== -->
+  <!-- ===================================================== -->
+  <div class="jf-gender-panel" data-gender="him" style="display:none;">
+
+  <!-- ===== NAIL CARE ===== -->
+  <section class="jf-section" id="nailcare-him">
     <div class="jf-container">
 
       <div class="jf-section-head">
-        <div class="jf-section-icon"><i class="fa-solid fa-user-tie"></i></div>
-        <h2 class="jf-section-title jf-display">خدمات الرجال</h2>
-        <p class="jf-section-sub">09 · مانيكير وباديكير</p>
+        <div class="jf-section-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <h2 class="jf-section-title jf-display">العناية بالأظافر</h2>
+        <p class="jf-section-sub">01 · مانيكير وباديكير</p>
       </div>
 
       <div class="jf-group">
-        <div class="jf-row"><span class="jf-row-name">مانيكير عادي</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
-        <div class="jf-row"><span class="jf-row-name">مانيكير + سكراب</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
-        <div class="jf-row"><span class="jf-row-name">باديكير عادي</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+        <div class="jf-row"><span class="jf-row-name">مانيكير روسي</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+        <div class="jf-row"><span class="jf-row-name">باديكير روسي</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
         <div class="jf-row"><span class="jf-row-name">باديكير طبي</span><span class="jf-row-dots"></span><span class="jf-row-price">$25</span></div>
-        <div class="jf-row"><span class="jf-row-name">باديكير + انعكاسية</span><span class="jf-row-dots"></span><span class="jf-row-price">$35</span></div>
+        <div class="jf-row"><span class="jf-row-name">باديكير طبي مع مساج استرخاء</span><span class="jf-row-dots"></span><span class="jf-row-price">$40</span></div>
       </div>
 
     </div>
   </section>
+
+  <div class="jf-divider"></div>
+
+  <!-- ===== SOLARIUM ===== -->
+  <section class="jf-section" id="solarium-him">
+    <div class="jf-container">
+
+      <div class="jf-section-head">
+        <div class="jf-section-icon"><i class="fa-solid fa-sun"></i></div>
+        <h2 class="jf-section-title jf-display">السولاريوم</h2>
+        <p class="jf-section-sub">02 · جلسات وباقات</p>
+      </div>
+
+      <div class="jf-group">
+        <div class="jf-row"><span class="jf-row-name">سولاريوم، دقيقة واحدة</span><span class="jf-row-dots"></span><span class="jf-row-price">$1</span></div>
+        <div class="jf-row"><span class="jf-row-name">جلسة، 12 دقيقة</span><span class="jf-row-dots"></span><span class="jf-row-price">$12</span></div>
+        <div class="jf-row"><span class="jf-row-name">باقة، 100 دقيقة</span><span class="jf-row-dots"></span><span class="jf-row-price">$50</span></div>
+      </div>
+
+      <div class="jf-callout">
+        3 أسابيع لإتمام جميع الجلسات. السولاريوم لدينا معقّم بالكامل لضمان سلامتك وراحتك: <strong>دون بقع أو تغيّر في لون البشرة</strong>.
+      </div>
+
+    </div>
+  </section>
+
+  <div class="jf-divider"></div>
+
+  <!-- ===== LASER HAIR REMOVAL ===== -->
+  <section class="jf-section" id="laser-him">
+    <div class="jf-container">
+
+      <div class="jf-section-head">
+        <div class="jf-section-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h2 class="jf-section-title jf-display">إزالة الشعر بالليزر</h2>
+        <p class="jf-section-sub">03 · تقنية Quadro سريعة ودقيقة</p>
+        <p class="jf-section-intro">نتائج ناعمة ومريحة جلسة بعد جلسة.</p>
+      </div>
+
+      <div class="jf-feature">
+        <p class="jf-feature-label">عرض الجسم الكامل</p>
+        <div class="jf-feature-row">
+          <span class="jf-feature-name">الجسم الكامل (باقة)</span>
+          <span class="jf-feature-price">$60</span>
+        </div>
+        <p class="jf-feature-note">يشمل الساقين الكاملتين، الذراعين الكاملتين، الإبطين ومنطقة البيكيني.</p>
+      </div>
+
+      <div class="jf-cols">
+        <div class="jf-group">
+          <h3 class="jf-group-title">الجسم</h3>
+          <div class="jf-row"><span class="jf-row-name">الساقين الكاملتين</span><span class="jf-row-dots"></span><span class="jf-row-price">$30</span></div>
+          <div class="jf-row"><span class="jf-row-name">نصف الساقين</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">الذراعين الكاملتين</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">نصف الذراعين</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">الإبطين</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">البيكيني الكامل</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">البطن الكامل</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">نصف البطن</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">خط البطن</span><span class="jf-row-dots"></span><span class="jf-row-price">$5</span></div>
+          <div class="jf-row"><span class="jf-row-name">الصدر (Boobs)</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">الصدر العلوي (Chest)</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+        </div>
+        <div class="jf-group">
+          <h3 class="jf-group-title">الظهر، الرقبة والوجه</h3>
+          <div class="jf-row"><span class="jf-row-name">الظهر الكامل</span><span class="jf-row-dots"></span><span class="jf-row-price">$30</span></div>
+          <div class="jf-row"><span class="jf-row-name">أسفل الظهر</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">الأرداف</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">الكتفين</span><span class="jf-row-dots"></span><span class="jf-row-price">$10</span></div>
+          <div class="jf-row"><span class="jf-row-name">مقدمة الرقبة</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">خلفية الرقبة</span><span class="jf-row-dots"></span><span class="jf-row-price">$8</span></div>
+          <div class="jf-row"><span class="jf-row-name">الوجه الكامل</span><span class="jf-row-dots"></span><span class="jf-row-price">$20</span></div>
+          <div class="jf-row"><span class="jf-row-name">نصف الوجه</span><span class="jf-row-dots"></span><span class="jf-row-price">$15</span></div>
+          <div class="jf-row"><span class="jf-row-name">الشفة العليا</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">الذقن</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">الجبين</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+          <div class="jf-row"><span class="jf-row-name">السوالف</span><span class="jf-row-dots"></span><span class="jf-row-price">$7</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+  <!-- ===== END له ===== -->
 
   <!-- ===== BOOKING CTA ===== -->
   <section class="jf-cta">
@@ -349,6 +461,40 @@
     تصميم <a href="https://www.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Colart Digital Marketing Agency</a><span class="jf-sep">·</span>استضافة <a href="https://pricelists.colartdigitalmarketingagency.com/" target="_blank" rel="noopener">Price Lists by Colart</a>
   </p>
 </footer>
+
+<script>
+  (function () {
+    // Animated لها / له toggle
+    var toggle = document.getElementById('jfGenderToggle');
+    var buttons = toggle.querySelectorAll('.jf-gender-btn');
+    var panels = document.querySelectorAll('.jf-gender-panel');
+    var catnavs = document.querySelectorAll('.jf-gender-catnav');
+
+    function setGender(target) {
+      toggle.setAttribute('data-active', target);
+      buttons.forEach(function (b) {
+        b.classList.toggle('is-active', b.getAttribute('data-target') === target);
+      });
+      panels.forEach(function (p) {
+        var match = p.getAttribute('data-gender') === target;
+        if (match) {
+          p.style.display = 'block';
+          requestAnimationFrame(function () { p.classList.add('is-visible'); });
+        } else {
+          p.classList.remove('is-visible');
+          p.style.display = 'none';
+        }
+      });
+      catnavs.forEach(function (n) {
+        n.style.display = n.getAttribute('data-gender') === target ? 'block' : 'none';
+      });
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setGender(b.getAttribute('data-target')); });
+    });
+  })();
+</script>
 
 </body>
 </html>
