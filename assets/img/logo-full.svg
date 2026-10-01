@@ -1,79 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Price Lists by Colart | Digital Price Lists</title>
-<meta name="description" content="Every business price list designed, built and hosted by Colart Digital Marketing Agency: clear pricing, mobile-friendly, and always up to date. Search or browse to find a business's price list.">
-
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header">
-  <a href="/" class="site-logo" aria-label="Price Lists by Colart: home">
-    <img src="assets/img/logo-mark.svg" alt="" style="height:30px;width:auto;margin-right:10px;">
-    <span style="font-size:15px;line-height:1.15;">
-      <strong style="display:block;font-weight:900;letter-spacing:-.01em;color:var(--ink);">PRICE LISTS</strong>
-      <span style="display:block;font-weight:300;font-size:10px;letter-spacing:.14em;color:var(--purple);">BY COLART</span>
-    </span>
-  </a>
-  <a href="https://colartdigitalmarketingagency.com" class="back-link">
-    <i class="fa-solid fa-arrow-left"></i>
-    <span>Colart Digital Marketing Agency</span>
-  </a>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="hero-eyebrow"><i class="fa-solid fa-tags"></i> Digital Price Lists</span>
-        <h1 class="hero-title">
-          <span class="line">Every price list,</span>
-          <span class="line">one link</span>
-          <span class="line is-bold">away.</span>
-        </h1>
-        <p class="hero-text">Every business below has its digital price list designed, built and hosted by Colart Digital Marketing Agency. Clear pricing, mobile-friendly, and always up to date: no reprinting, no outdated prices, just a link or a scan away.</p>
-
-        <div class="hero-search-wrap">
-          <label class="hero-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search a business or category&hellip;" autocomplete="off">
-            <kbd>/</kbd>
-          </label>
-          <p class="hero-count" id="heroCount"><strong>0</strong> price lists</p>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-<line class="eco-line" x1="10" y1="60" x2="95" y2="85" stroke="#50a0b4" stroke-width="3" stroke-linecap="round" style="animation-delay:0.55s" />
-<circle class="eco-dot" cx="10" cy="60" r="6" fill="#50a0b4" style="animation-delay:0.8s" />
-<circle class="eco-dot" cx="95" cy="85" r="4" fill="#50a0b4" style="animation-delay:0.9s" />
-<line class="eco-line" x1="0" y1="130" x2="90" y2="140" stroke="#c81478" stroke-width="3" stroke-linecap="round" style="animation-delay:0.7s" />
-<circle class="eco-dot" cx="0" cy="130" r="6" fill="#c81478" style="animation-delay:0.95s" />
-<circle class="eco-dot" cx="90" cy="140" r="4" fill="#c81478" style="animation-delay:1.05s" />
-<line class="eco-line" x1="14" y1="200" x2="95" y2="205" stroke="#dcdc3c" stroke-width="3" stroke-linecap="round" style="animation-delay:0.85s" />
-<circle class="eco-dot" cx="14" cy="200" r="6" fill="#dcdc3c" style="animation-delay:1.1s" />
-<circle class="eco-dot" cx="95" cy="205" r="4" fill="#dcdc3c" style="animation-delay:1.2s" />
-<line class="eco-line" x1="4" y1="270" x2="90" y2="260" stroke="#8cb43c" stroke-width="3" stroke-linecap="round" style="animation-delay:1s" />
-<circle class="eco-dot" cx="4" cy="270" r="6" fill="#8cb43c" style="animation-delay:1.25s" />
-<circle class="eco-dot" cx="90" cy="260" r="4" fill="#8cb43c" style="animation-delay:1.35s" />
-<line class="eco-line" x1="18" y1="335" x2="100" y2="310" stroke="#642878" stroke-width="3" stroke-linecap="round" style="animation-delay:1.15s" />
-<circle class="eco-dot" cx="18" cy="335" r="6" fill="#642878" style="animation-delay:1.4s" />
-<circle class="eco-dot" cx="100" cy="310" r="4" fill="#642878" style="animation-delay:1.5s" />
-<g class="eco-mark">
-<g transform="translate(-15.21 -94.43) scale(0.29)">
-<path fill="#4b9abf" d="M 1108.98 1086.82 C 1177.38 1088.57 1246.09 1088.14 1303.98 1054.21 C 1370.07 1015.48 1408.03 933.82 1395.05 858.32 C 1387.02 811.66 1361.66 769.38 1330.02 734.15 C 1298.39 698.93 1260.51 669.98 1222.87 641.25 L 1062.43 518.79 C 1054.93 513.07 1046.68 503.02 1052.43 495.54 C 1055.38 491.71 1060.73 490.89 1065.54 490.4 C 1156.39 481.16 1249.52 485.18 1336.81 512 C 1424.1 538.82 1505.4 589.53 1560.42 662.41 C 1607.4 724.65 1633.95 801.76 1636.9 879.68 C 1641.48 1000.95 1584.78 1125.7 1483.19 1192.08 C 1399.23 1246.93 1294.74 1258.95 1194.48 1261.3 C 1173.69 1261.79 1152.3 1261.82 1132.93 1254.26 C 1107.61 1244.39 1088.96 1222.9 1071.36 1202.2 C 1054.77 1182.66 972.43 1113.65 1014.24 1090.8 C 1023.36 1085.82 1034.22 1085.5 1044.61 1085.5 C 1065.8 1085.5 1087.38 1086.27 1108.98 1086.82 "/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010.3 240" role="img" aria-label="Price Lists by Colart logo">
+  <g transform="translate(-101.14 -82.96) scale(0.2)">
+    <path fill="#4b9abf" d="M 1108.98 1086.82 C 1177.38 1088.57 1246.09 1088.14 1303.98 1054.21 C 1370.07 1015.48 1408.03 933.82 1395.05 858.32 C 1387.02 811.66 1361.66 769.38 1330.02 734.15 C 1298.39 698.93 1260.51 669.98 1222.87 641.25 L 1062.43 518.79 C 1054.93 513.07 1046.68 503.02 1052.43 495.54 C 1055.38 491.71 1060.73 490.89 1065.54 490.4 C 1156.39 481.16 1249.52 485.18 1336.81 512 C 1424.1 538.82 1505.4 589.53 1560.42 662.41 C 1607.4 724.65 1633.95 801.76 1636.9 879.68 C 1641.48 1000.95 1584.78 1125.7 1483.19 1192.08 C 1399.23 1246.93 1294.74 1258.95 1194.48 1261.3 C 1173.69 1261.79 1152.3 1261.82 1132.93 1254.26 C 1107.61 1244.39 1088.96 1222.9 1071.36 1202.2 C 1054.77 1182.66 972.43 1113.65 1014.24 1090.8 C 1023.36 1085.82 1034.22 1085.5 1044.61 1085.5 C 1065.8 1085.5 1087.38 1086.27 1108.98 1086.82 "/>
 <path fill="#c51a7f" d="M 860.37 1561.62 C 861.01 1557.08 863.62 1553.69 866.81 1550.66 C 902.1 1517.18 937.4 1483.71 972.7 1450.23 C 1016.58 1408.61 1060.45 1366.99 1104.34 1325.38 C 1113.05 1317.13 1121.93 1309.06 1130.55 1300.73 C 1135.28 1296.15 1140.5 1293.88 1146.8 1296.54 C 1153.06 1299.16 1154.53 1304.62 1154.52 1310.91 C 1154.46 1381.55 1154.46 1452.2 1154.45 1522.85 C 1154.45 1535.84 1154.54 1548.84 1154.45 1561.84 C 1154.23 1595.11 1130.3 1624.95 1097.93 1632.42 C 1097.12 1632.6 1096.28 1632.6 1095.45 1632.69 C 1093.5 1631.42 1091.31 1631.6 1089.15 1631.63 C 1071.57 1631.88 1053.98 1631.19 1036.4 1632.53 C 1024.35 1633.45 1012.27 1631.66 1000.21 1631.72 C 987.99 1631.78 975.77 1631.43 963.52 1632.36 C 954.12 1633.06 944.59 1631.81 935.11 1631.66 C 925.98 1631.53 916.87 1631.82 907.73 1632.5 C 896.14 1633.35 884.54 1630.9 872.88 1631.63 C 869.52 1631.84 868.02 1626.68 864.04 1628.57 C 863.98 1628.6 863.4 1627.5 863.05 1626.95 C 861.64 1624.76 861.32 1622.37 861.34 1619.79 C 861.39 1602.13 861.39 1584.47 861.34 1566.81 C 861.34 1565.05 862 1563.1 860.37 1561.62 "/>
 <path fill="#55ae91" d="M 865.24 666.05 C 877.88 666.66 890.51 667.35 903.15 667.84 C 915.77 668.33 925.51 663.05 931.75 652.12 C 938.08 641.03 938.59 629.82 931.44 618.61 C 916.67 595.45 902.12 572.15 887.43 548.95 C 883.07 542.07 884.1 537.57 891.18 533.33 C 915.77 518.63 940.35 503.93 964.93 489.23 C 973.86 483.89 978.33 484.15 986.84 490.45 C 1072.79 554.05 1158.73 617.65 1244.68 681.25 C 1249.23 684.61 1253.88 687.85 1258.39 691.27 C 1261.58 693.68 1264.17 696.65 1262.64 701.01 C 1261.1 705.42 1257.5 706.72 1253.06 706.52 C 1231.77 705.56 1210.49 704.27 1189.18 703.81 C 1131.44 702.58 1079.5 719.13 1034.33 755.61 C 1016.77 769.79 1001.35 786.12 987.01 803.52 C 982.18 809.39 978.63 809.34 973.6 803.74 C 936.21 762.11 898.8 720.49 861.4 678.86 C 860.51 677.88 859.68 676.82 858.71 675.91 C 856.76 674.05 855.5 671.93 856.65 669.25 C 857.86 666.41 860.34 665.62 863.25 665.86 C 863.91 665.92 864.58 665.87 865.25 665.87 C 865.24 665.93 865.24 665.99 865.24 666.05 "/>
 <path fill="#92bf40" d="M 988.66 1026.62 C 988.66 1054.28 988.7 1081.94 988.63 1109.59 C 988.62 1117.08 985.79 1119.27 978.25 1118.24 C 922.66 1110.66 867.07 1103.1 811.47 1095.52 C 798.77 1093.79 786.08 1092.04 773.38 1090.26 C 764.32 1088.99 755.65 1093.19 751.09 1101.13 C 741.62 1117.62 723.84 1125.79 706.25 1121.73 C 689.12 1117.78 676.27 1102.38 674.81 1084.03 C 673.12 1062.71 689.8 1042.66 711.13 1040.61 C 722.06 1039.56 732.22 1036.01 742.18 1031.71 C 743.39 1031.18 744.74 1030.6 745.58 1029.65 C 754.44 1019.53 767.17 1016.14 778.71 1010.91 C 839.07 983.54 899.58 956.5 960.04 929.34 C 963.55 927.76 967.09 926.45 971.04 926.39 C 981.65 926.24 988.7 932.97 988.71 943.65 C 988.77 971.3 988.73 998.96 988.73 1026.62 Z M 988.66 1026.62 "/>
@@ -108,35 +35,7 @@
 <path fill="#c94088" d="M 735.42 719.73 C 737.55 726.69 735.91 733.8 736.36 740.83 C 734.48 733.87 735.57 726.77 735.42 719.73 "/>
 <path fill="#c94088" d="M 722.28 713.8 C 726.62 714.28 731.22 712.17 735.31 715.11 C 731.08 713.56 726.53 715.16 722.28 713.8 "/>
 <path fill="#c41d7f" d="M 736.41 689.61 C 736.77 688.5 735.76 685.91 737.78 686.43 C 739.6 686.89 743.24 686.75 742.46 690.82 C 742.1 692.75 742.62 694.93 739.54 694.72 C 736.14 694.49 736.43 692.02 736.41 689.61 "/>
-</g>
-</g>
+  </g>
+  <text x="250.3" y="122" font-family="Lato, 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="108" letter-spacing="1" fill="#1a1424" dominant-baseline="middle">PRICE LISTS</text>
+  <text x="250.3" y="188" font-family="Lato, 'Segoe UI', Arial, sans-serif" font-weight="300" font-size="40" letter-spacing="6" fill="#642878" dominant-baseline="middle">BY COLART</text>
 </svg>
-      </div>
-    </div>
-  </section>
-
-  <nav class="toolbar" id="toolbar" aria-label="Filter by category"></nav>
-
-  <section class="directory" id="pricelists">
-    <div class="directory-head">
-      <h2>Pick a business, <span class="accent">view its price list</span></h2>
-      <p>Tap any card below to open that business's digital price list.</p>
-    </div>
-
-    <div class="card-grid" id="cardGrid"></div>
-
-    <div class="empty-state" id="emptyState">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <p>No price lists match your search. Try a different name or category.</p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p><strong>Price Lists</strong> &middot; Powered by <a href="https://colartdigitalmarketingagency.com">Colart Digital Marketing Agency</a></p>
-</footer>
-
-<script src="app.js"></script>
-</body>
-</html>
