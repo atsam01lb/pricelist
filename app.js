@@ -20,6 +20,13 @@ const ITEMS = [
     category: 'Beauty & Grooming',
     logo: 'pearl-beauty-lounge/assets/img/pearl-logo-black.png',
     href: '/pearl-beauty-lounge/'
+  },
+  {
+    name: 'Fianchetto Chess Center',
+    slug: 'fianchetto',
+    category: 'Sports & Leisure',
+    logo: 'fianchetto/assets/img/favicon-192.png',
+    href: '/fianchetto/'
   }
 ];
 

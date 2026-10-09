@@ -1,0 +1,255 @@
+/* ===========================================
+   FIANCHETTO CHESS CENTER — Price list
+   Brand: gold from the logo diamond + ink black / ivory white
+=========================================== */
+
+:root {
+  --gold:      #c39b4b;
+  --gold-dk:   #9d7a34;
+  --gold-lt:   #f3e8d0;
+  --ink:       #070706;
+  --ink-soft:  #1c1a16;
+  --ivory:     #fcfbf9;
+  --muted:     rgba(7, 7, 6, .58);
+  --line:      rgba(7, 7, 6, .10);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---- Header ---- */
+.fc-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  background: rgba(7, 7, 6, .92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(195, 155, 75, .25);
+}
+.fc-header img { height: 38px; width: auto; }
+.fc-header .back {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1.5px solid rgba(195, 155, 75, .4);
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background .3s, color .3s;
+}
+.fc-header .back:hover { background: var(--gold); color: var(--ink); }
+
+/* ---- Hero ---- */
+.fc-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+  padding: 56px 24px 64px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(195, 155, 75, .22) 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, rgba(195, 155, 75, .14) 0%, transparent 45%),
+    var(--ink);
+}
+.fc-hero::before {
+  /* faint chessboard texture */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .05;
+  background-image:
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%),
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
+  background-size: 56px 56px;
+  background-position: 0 0, 28px 28px;
+}
+.fc-hero-logo {
+  width: clamp(150px, 34vw, 230px);
+  margin: 0 auto 22px;
+  filter: drop-shadow(0 18px 34px rgba(0, 0, 0, .5));
+}
+.fc-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.fc-title {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.1;
+  font-weight: 300;
+  letter-spacing: -.01em;
+}
+.fc-title strong { font-weight: 900; color: var(--gold); }
+.fc-sub {
+  margin: 0 auto;
+  max-width: 460px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .72);
+}
+
+/* ---- Sections ---- */
+.fc-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 44px 20px 28px;
+}
+.fc-section { margin-bottom: 44px; }
+.fc-section-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.fc-section-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--gold);
+  font-size: 18px;
+}
+.fc-section-title {
+  margin: 0;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 900;
+  letter-spacing: -.01em;
+}
+.fc-section-note { margin: 2px 0 0; font-size: 13.5px; color: var(--muted); }
+
+/* ---- Price rows ---- */
+.fc-list {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 26px rgba(7, 7, 6, .05);
+}
+.fc-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+  transition: background .25s;
+}
+.fc-row:last-child { border-bottom: none; }
+.fc-row:hover { background: #fffdf8; }
+.fc-row::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--gold);
+  transform: scaleY(0);
+  transition: transform .3s;
+}
+.fc-row:hover::before { transform: scaleY(1); }
+.fc-name {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+.fc-detail {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+.fc-price {
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--gold-dk);
+  white-space: nowrap;
+}
+.fc-price small { font-size: 13px; font-weight: 700; margin-left: 3px; }
+
+/* ---- Promo banner ---- */
+.fc-promo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: var(--ink);
+  color: #fff;
+  border: 1.5px solid rgba(195, 155, 75, .5);
+}
+.fc-promo-badge {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 900;
+}
+.fc-promo p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
+.fc-promo p span { color: var(--gold); }
+
+/* ---- Footer ---- */
+.fc-footer {
+  padding: 30px 20px 36px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+.fc-footer p { margin: 0; font-size: 12.5px; color: var(--muted); }
+.fc-footer a { color: var(--gold-dk); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.fc-footer a:hover { color: var(--ink); }
+
+@media (max-width: 520px) {
+  .fc-header { padding: 10px 16px; }
+  .fc-header .back span { display: none; }
+  .fc-row { padding: 18px 16px; }
+  .fc-name { font-size: 15px; }
+  .fc-price { font-size: 19px; }
+  .fc-promo { padding: 18px; }
+  .fc-promo-badge { width: 52px; height: 52px; font-size: 17px; }
+  .fc-promo p { font-size: 13.5px; }
+}
