@@ -27,6 +27,13 @@ const ITEMS = [
     category: 'Sports & Leisure',
     logo: 'fianchetto/assets/img/favicon-192.png',
     href: '/fianchetto/'
+  },
+  {
+    name: 'Delar Tattoo',
+    slug: 'delar-tattoo',
+    category: 'Tattoo & Piercing',
+    logo: 'delar-tattoo/assets/img/delar-icon.svg',
+    href: '/delar-tattoo/'
   }
 ];
 
