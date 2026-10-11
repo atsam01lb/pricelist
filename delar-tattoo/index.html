@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<script>document.documentElement.className="js";</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="dt-header">
   <a href="#top" aria-label="Delar Tattoo: home"><img src="assets/img/delar-icon.svg" alt="Delar Tattoo"></a>
-  <a href="/" class="back"><i class="fa-solid fa-arrow-left"></i> <span>All Price Lists</span></a>
 </header>
 
 <main id="top">
@@ -42,7 +42,7 @@
         <div class="dt-section-icon"><i class="fa-solid fa-gem"></i></div>
         <h2 class="dt-section-title">Piercing</h2>
       </div>
-      <div class="dt-list">
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Lobe</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Upper Lobe</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Helix</div><div class="dt-price">0<small>$</small></div></div>
@@ -60,8 +60,8 @@
         <div class="dt-section-icon"><i class="fa-solid fa-pen-nib"></i></div>
         <h2 class="dt-section-title">Tattoo</h2>
       </div>
-      <h3 class="dt-group">Tiny / Fineline / Small</h3>
-      <div class="dt-list">
+      <h3 class="dt-group" data-reveal-head>Tiny / Fineline / Small</h3>
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Tiny / Fineline (Max 5cm)</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">2 Tiny / Fineline</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">3 Tiny / Fineline</div><div class="dt-price">0<small>$</small></div></div>
@@ -73,8 +73,8 @@
         <div class="dt-row"><div class="dt-name">Lettering Finelines (15cm)</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Lettering On Spine</div><div class="dt-price">0<small>$</small></div></div>
       </div>
-      <h3 class="dt-group">Medium Price Tattoo</h3>
-      <div class="dt-list">
+      <h3 class="dt-group" data-reveal-head>Medium Price Tattoo</h3>
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Medium Square (10cm)</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Medium Square (15cm)</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Hand Tattoo</div><div class="dt-price">0<small>$</small></div></div>
@@ -84,8 +84,8 @@
         <div class="dt-row"><div class="dt-name">Half Neck</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Full Neck</div><div class="dt-price">0<small>$</small></div></div>
       </div>
-      <h3 class="dt-group">Large Price Tattoo</h3>
-      <div class="dt-list">
+      <h3 class="dt-group" data-reveal-head>Large Price Tattoo</h3>
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Fore Arms</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Upper Arms</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">A4 Paper Size</div><div class="dt-price">0<small>$</small></div></div>
@@ -93,8 +93,8 @@
         <div class="dt-row"><div class="dt-name">Full Chest</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Half Sleeve</div><div class="dt-price">0<small>$</small></div></div>
       </div>
-      <h3 class="dt-group">Big Piece Tattoo</h3>
-      <div class="dt-list">
+      <h3 class="dt-group" data-reveal-head>Big Piece Tattoo</h3>
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Full Head</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Full Sleeve</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Full Leg</div><div class="dt-price">0<small>$</small></div></div>
@@ -108,7 +108,7 @@
         <div class="dt-section-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
         <h2 class="dt-section-title">Henna</h2>
       </div>
-      <div class="dt-list">
+      <div class="dt-list" data-reveal>
         <div class="dt-row"><div class="dt-name">Bridal Henna</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Engagement Henna</div><div class="dt-price">0<small>$</small></div></div>
         <div class="dt-row"><div class="dt-name">Hands</div><div class="dt-price">0<small>$</small></div></div>
@@ -132,13 +132,16 @@
 </footer>
 
 <script>
-  // Highlight the active category in the sticky nav
   (function () {
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Active category in the sticky nav
     var links = document.querySelectorAll('.dt-catnav a');
     var map = {};
     links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
-    if (!('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function (entries) {
+    if (!('IntersectionObserver' in window)) { document.documentElement.className = 'no-js'; return; }
+
+    var nav = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) {
           links.forEach(function (l) { l.classList.remove('is-active'); });
@@ -146,7 +149,22 @@
         }
       });
     }, { rootMargin: '-35% 0px -55% 0px' });
-    document.querySelectorAll('.dt-section').forEach(function (s) { io.observe(s); });
+    document.querySelectorAll('.dt-section').forEach(function (s) { nav.observe(s); });
+
+    // Scroll reveal: headings, section icons, then rows stagger in
+    var targets = document.querySelectorAll('.dt-section-head, [data-reveal-head], [data-reveal]');
+    if (reduce) { targets.forEach(function (t) { t.classList.add('is-in'); }); return; }
+    document.querySelectorAll('[data-reveal]').forEach(function (list) {
+      list.querySelectorAll('.dt-row').forEach(function (r, i) {
+        r.style.transitionDelay = Math.min(i * 55, 440) + 'ms';
+      });
+    });
+    var rev = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-in'); rev.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    targets.forEach(function (t) { rev.observe(t); });
   })();
 </script>
 </body>
