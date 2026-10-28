@@ -172,7 +172,8 @@ page = f'''<!DOCTYPE html>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="wrap">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
       <h2 class="hero-title">Premium grooming,<br><span>your location.</span></h2>
       <p class="hero-sub">Precision. Privacy. Confidence.</p>
       <p class="hero-text">Experience premium body grooming services in the comfort and privacy of your home or hotel.</p>
