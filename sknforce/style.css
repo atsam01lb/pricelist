@@ -59,7 +59,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-head); }
 }
 .site-header::after {
   content: "";
-  position: absolute; left: 50%; bottom: -1px; transform: translateX(-50%);
+  position: absolute; left: 0; right: 0; margin: 0 auto; bottom: -1px;
   width: min(240px, 50%); height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
@@ -114,7 +114,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-head); }
   letter-spacing: .08em;
   text-transform: uppercase;
 }
-.hero-title span { color: var(--gold); }
+.hero-title .gold { color: var(--gold); }
 .hero-sub {
   margin: 18px 0 14px;
   font-family: var(--font-head);
@@ -285,6 +285,8 @@ h1, h2, h3 { margin: 0; font-family: var(--font-head); }
 }
 .attrib a { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .attrib a:hover { color: #e3c47f; }
+.attrib .sep { margin: 0 10px; color: var(--gold-dk); }
+@media (max-width: 520px) { .attrib .sep { display: block; height: 0; margin: 3px 0; overflow: hidden; } }
 
 /* ---- Sticky WhatsApp ---- */
 .sticky-wa {
@@ -346,4 +348,131 @@ h1, h2, h3 { margin: 0; font-family: var(--font-head); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+
+/* ===========================================
+   ANIMATION LAYER (all motion respects reduced-motion; see bottom)
+=========================================== */
+@keyframes skUp      { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes skLineIn  { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes skLogoIn  { from { opacity: 0; transform: scale(.88) translateY(-8px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes skShimmer { 0% { background-position: 160% 0; } 55%, 100% { background-position: -60% 0; } }
+@keyframes skDraw    { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes skKen     { from { transform: scale(1) translate3d(0,0,0); } to { transform: scale(1.09) translate3d(-1.2%, 1%, 0); } }
+@keyframes skPulse   { 0% { box-shadow: 0 12px 34px rgba(0,0,0,.45), 0 0 0 0 rgba(213,177,106,.55); }
+                       70%,100% { box-shadow: 0 12px 34px rgba(0,0,0,.45), 0 0 0 20px rgba(213,177,106,0); } }
+@keyframes skGlow    { 0%,100% { box-shadow: 0 0 0 rgba(213,177,106,0); border-color: rgba(213,177,106,.7); }
+                       50%     { box-shadow: 0 0 46px rgba(213,177,106,.22); border-color: var(--gold); } }
+@keyframes skPop     { 0% { transform: scale(0) rotate(-30deg); opacity: 0; } 70% { transform: scale(1.14) rotate(4deg); opacity: 1; } 100% { transform: none; opacity: 1; } }
+@keyframes skOpen    { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* --- scroll progress bar --- */
+.progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 150;
+  background: linear-gradient(90deg, var(--gold-dk), var(--gold), #f0d79a);
+  transform: scaleX(0); transform-origin: left;
+}
+
+/* --- load sequence --- */
+.hero-bg { animation: skKen 24s ease-in-out infinite alternate; will-change: transform; }
+.logo { position: relative; animation: skLogoIn 1s cubic-bezier(.2,.8,.2,1) .05s both; }
+.logo::after {                       /* gold light sweep that follows the logo shape */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 38%, rgba(255,246,214,.85) 50%, transparent 62%) 160% 0 / 260% 100% no-repeat;
+  -webkit-mask: url('assets/img/sknforce-logo.png') center / contain no-repeat;
+          mask: url('assets/img/sknforce-logo.png') center / contain no-repeat;
+  animation: skShimmer 7s ease-in-out 1.4s infinite;
+}
+.header-tag { animation: skUp .8s ease-out .5s both; }
+.site-header::after { transform-origin: center; animation: skDraw 1.1s ease-out .4s both; }
+
+.hero-title .ln { display: block; overflow: hidden; padding-bottom: .08em; }
+.hero-title .ln-in { display: inline-block; animation: skLineIn .9s cubic-bezier(.2,.8,.2,1) both; }
+.hero-title .ln:nth-child(1) .ln-in { animation-delay: .35s; }
+.hero-title .ln:nth-child(2) .ln-in { animation-delay: .55s; }
+.hero-sub  { animation: skUp .8s ease-out .85s both; }
+.hero-text { animation: skUp .8s ease-out 1s both; }
+.hero-cta .btn { animation: skUp .8s cubic-bezier(.2,.8,.2,1) both; }
+.hero-cta .btn:nth-child(1) { animation-delay: 1.15s; }
+.hero-cta .btn:nth-child(2) { animation-delay: 1.3s; }
+.tabs { animation: skUp .7s ease-out 1.4s both; }
+
+/* --- price cards --- */
+.js .cat { opacity: 0; transform: translateY(34px) scale(.985); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); position: relative; overflow: hidden; }
+.js .cat.is-in { opacity: 1; transform: none; }
+.cat::before {                       /* gold edge that draws across the top */
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0); transform-origin: left;
+}
+.cat.is-in::before { animation: skDraw 1.2s ease-out .15s forwards; }
+.js .cat .cat-num { opacity: 0; }
+.js .cat.is-in .cat-num { animation: skPop .75s cubic-bezier(.3,1.4,.5,1) .2s forwards; }
+.js .cat .cat-title { opacity: 0; letter-spacing: .32em; transition: opacity .8s ease .3s, letter-spacing 1.1s cubic-bezier(.2,.8,.2,1) .3s; }
+.js .cat.is-in .cat-title { opacity: 1; letter-spacing: .12em; }
+.js .cat .cat-note { opacity: 0; transition: opacity .8s ease .6s; }
+.js .cat.is-in .cat-note { opacity: 1; }
+
+/* rows: slide in, divider draws, price counts up (see app.js) */
+.row { position: relative; border-bottom: none; overflow: hidden; }
+.row::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: var(--gold-line); transform-origin: left;
+}
+.row:last-child::after { display: none; }
+.js .row { opacity: 0; transform: translateX(-26px); }
+.js .row::after { transform: scaleX(0); }
+.js .cat.is-in .row {
+  opacity: 1; transform: none;
+  transition: opacity .6s ease, transform .7s cubic-bezier(.2,.8,.2,1), background .25s, padding .25s;
+  transition-delay: calc(var(--i, 0) * 70ms + 350ms), calc(var(--i, 0) * 70ms + 350ms), 0s, 0s;
+}
+.js .cat.is-in .row::after { transform: scaleX(1); transition: transform .9s ease calc(var(--i, 0) * 70ms + 550ms); }
+.row::before {                       /* gold sweep on hover */
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(90deg, rgba(213,177,106,.16), transparent 70%);
+  transform: translateX(-101%); transition: transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.row > * { position: relative; z-index: 1; }
+.row:hover::before { transform: none; }
+.price { display: inline-block; transition: transform .3s cubic-bezier(.3,1.4,.5,1), text-shadow .3s; }
+.row:hover .price { transform: scale(1.1); text-shadow: 0 0 18px rgba(213,177,106,.45); }
+.price.is-counting { text-shadow: 0 0 14px rgba(213,177,106,.5); }
+
+/* --- tabs / buttons --- */
+.tab.is-active { box-shadow: 0 0 0 4px rgba(213,177,106,.14); }
+.btn-gold { position: relative; overflow: hidden; }
+.btn-gold::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.5), transparent);
+  transform: skewX(-18deg); transition: left .7s ease;
+}
+.btn-gold:hover::after { left: 130%; }
+.sticky-wa { animation: skPulse 3.2s ease-out 2.5s infinite; }
+
+/* --- booking + faq --- */
+.book-card { animation: skGlow 5s ease-in-out infinite; }
+.js .book-card { opacity: 0; transform: translateY(30px) scale(.97); transition: opacity .8s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+.js .book-card.is-in { opacity: 1; transform: none; }
+.faq-item summary::after { transition: transform .35s cubic-bezier(.3,1.4,.5,1); }
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+.faq-item[open] p { animation: skOpen .45s ease-out both; }
+.faq-item summary { transition: color .25s, padding-left .3s; }
+.faq-item summary:hover { color: var(--gold); padding-left: 8px; }
+
+/* --- footer --- */
+.js .site-footer .wrap { opacity: 0; transform: translateY(16px); transition: opacity .8s ease, transform .8s ease; }
+.js .site-footer.is-in .wrap { opacity: 1; transform: none; }
+
+/* --- reduced motion: show everything, move nothing --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg, .logo, .logo::after, .header-tag, .site-header::after, .hero-title .ln-in, .hero-sub, .hero-text,
+  .hero-cta .btn, .tabs, .cat::before, .cat-num, .sticky-wa, .book-card, .faq-item[open] p { animation: none !important; }
+  .js .cat, .js .row, .js .cat .cat-num, .js .cat .cat-title, .js .cat .cat-note, .js .book-card,
+  .js .site-footer .wrap { opacity: 1 !important; transform: none !important; letter-spacing: inherit; transition: none !important; }
+  .js .cat .cat-title { letter-spacing: .12em !important; }
+  .js .row::after { transform: none !important; }
+  .cat::before { transform: scaleX(1); }
+  .progress { display: none; }
 }

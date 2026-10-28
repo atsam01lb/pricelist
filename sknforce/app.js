@@ -1,6 +1,9 @@
-/* SKNFORCE price list — tiny helper script: tab highlighting, share, reveal. */
+/* SKNFORCE price list — tab highlighting, share, scroll animation, price count-up. */
 (function () {
   'use strict';
+
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
 
   // ---- Tabs: highlight the category in view ----
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
@@ -20,7 +23,7 @@
     }
   }
 
-  if ('IntersectionObserver' in window) {
+  if (hasIO) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) setActive(en.target.id); });
     }, { rootMargin: '-30% 0px -60% 0px' });
@@ -46,7 +49,14 @@
     document.body.removeChild(ta);
     return ok;
   }
-
+  function copyFallback(url) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(function () { say('Link copied'); },
+        function () { say(legacyCopy(url) ? 'Link copied' : url); });
+    } else {
+      say(legacyCopy(url) ? 'Link copied' : url);
+    }
+  }
   var shareBtn = document.getElementById('shareBtn');
   if (shareBtn) {
     shareBtn.addEventListener('click', function () {
@@ -67,25 +77,61 @@
       }
     });
   }
-  function copyFallback(url) {
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(url).then(function () { say('Link copied'); },
-        function () { say(legacyCopy(url) ? 'Link copied' : url); });
-    } else {
-      say(legacyCopy(url) ? 'Link copied' : url);
-    }
+
+  // ---- Scroll progress bar ----
+  var bar = document.getElementById('progress');
+  if (bar && !reduce) {
+    var ticking = false;
+    var update = function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(window.scrollY / h, 1) : 0) + ')';
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
   }
 
-  // ---- Minimal reveal-on-scroll (progressive: content is visible without JS) ----
-  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduce) {
-    document.documentElement.classList.add('js');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    items.forEach(function (el) { io.observe(el); });
+  // ---- Price count-up (final text stays in the HTML for SEO; animation is cosmetic) ----
+  function countUp(el) {
+    var final = el.textContent;
+    var target = parseFloat(final.replace(/[^0-9.]/g, ''));
+    if (!isFinite(target)) return;
+    var dur = 1100, start = null;
+    el.classList.add('is-counting');
+    function frame(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = '$' + (target * eased).toFixed(2);
+      if (p < 1) requestAnimationFrame(frame);
+      else { el.textContent = final; el.classList.remove('is-counting'); }
+    }
+    requestAnimationFrame(frame);
   }
+
+  // ---- Reveal on scroll (progressive: everything is visible without JS) ----
+  if (!hasIO || reduce) return;
+  document.documentElement.classList.add('js');
+
+  document.querySelectorAll('.cat').forEach(function (cat) {
+    cat.querySelectorAll('.row').forEach(function (row, i) { row.style.setProperty('--i', i); });
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      el.classList.add('is-in');
+      io.unobserve(el);
+      if (el.classList.contains('cat')) {
+        el.querySelectorAll('.row').forEach(function (row, i) {
+          setTimeout(function () { countUp(row.querySelector('.price')); }, 350 + i * 70);
+        });
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+  document.querySelectorAll('.cat, .book-card, .site-footer').forEach(function (el) { io.observe(el); });
 })();
