@@ -1,0 +1,55 @@
+{
+  "business": {
+    "name": "SKNFORCE",
+    "tagline": "Home & Hotel Grooming Services",
+    "phoneDisplay": "+961 78 953 018",
+    "phoneE164": "+96178953018",
+    "whatsapp": "https://wa.me/96178953018",
+    "whatsappBooking": "https://wa.me/96178953018?text=Hello%20SKNFORCE%2C%20I%20would%20like%20to%20book%20a%20grooming%20appointment.",
+    "url": "https://pricelists.colartdigitalmarketingagency.com/sknforce/",
+    "currency": "USD"
+  },
+  "categories": [
+    {
+      "id": "trimmer",
+      "tab": "Trimmer Machine",
+      "title": "Trimmer Machine",
+      "note": "Clean, precise trimming",
+      "services": [
+        ["Torso", 7.5],
+        ["Back", 7.5],
+        ["Armpits", 2.5],
+        ["Front Private Parts", 8.5],
+        ["Back Private Part", 8.5],
+        ["Legs", 8.0],
+        ["Hands", 8.0]
+      ]
+    },
+    {
+      "id": "razor",
+      "tab": "Razor",
+      "title": "Razor",
+      "note": "Smooth, close shave",
+      "services": [
+        ["Torso", 11.0],
+        ["Back", 10.0],
+        ["Armpits", 3.0],
+        ["Front Private Parts", 11.0],
+        ["Back Private Part", 12.0],
+        ["Legs", 11.0],
+        ["Hands", 11.0]
+      ]
+    },
+    {
+      "id": "fullbody",
+      "tab": "Full Body & More",
+      "title": "Full Body & Additional Services",
+      "note": "Complete grooming packages",
+      "services": [
+        ["Hair Removal Cream", 24.0],
+        ["Full Body Trimming", 27.0],
+        ["Full Body Shave with a Razor", 40.0]
+      ]
+    }
+  ]
+}

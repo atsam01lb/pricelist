@@ -34,6 +34,13 @@ const ITEMS = [
     category: 'Tattoo & Piercing',
     logo: 'delar-tattoo/assets/img/delar-icon.svg',
     href: '/delar-tattoo/'
+  },
+  {
+    name: 'SKNFORCE',
+    slug: 'sknforce',
+    category: 'Beauty & Grooming',
+    logo: 'sknforce/assets/img/card-icon.png',
+    href: '/sknforce/'
   }
 ];
 
